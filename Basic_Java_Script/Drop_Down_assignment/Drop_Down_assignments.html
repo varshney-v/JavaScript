@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop_Down</title>
+    <link rel="stylesheet" href="Drop_Down_assignments.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Desired Output</h1>
+        <h2>Drop-Down list</h2>
+        <div class="dropdown_list_box">
+            <span>
+                <label>Select Day:</label>
+                <select id="date" onchange="date2()"><option >--Select Date--</option>
+                    <script>
+                        function date2() {
+                            let dateElement = document.getElementById("date");
+                            dateElement.innerHTML = "";
+                            for(let a=1;a<=31;a++)
+                            {
+                                if(a<10)
+                                {
+                                    document.getElementById("date").innerHTML += a;
+                                }
+                                else
+                                {
+                                    document.getElementById("date").innerHTML += a;
+                                }
+                            }
+                        }
+                    </script>
+                </select>
+                <select id="month"><option>--Select Month--</option></select>
+                <select id="year"><option>--Select Year--</option></select>
+            </span>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
