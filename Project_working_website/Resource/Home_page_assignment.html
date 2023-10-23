@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            background-color: rgb(247, 188, 188);
+        }
+        div {
+            box-sizing:border-box;
+            text-align: center;
+            width: 220px;
+            margin: auto;
+            margin-top: 20%;
+            border: 2px solid grey;
+            background-color: brown;
+        }
+        img {
+            width : 40px;
+            height: auto;
+            margin-top: -50px ;
+            border-radius: 50%;
+        }
+        button {
+            margin-left: 32%;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer_login_box">
+        <span> <img src="login_image.png" alt="Login_please"></span>
+        <form action="web_page2.html" onsubmit="submitDetail(event)"><center>
+            <table>
+                <tr>
+                    <td><input type="text" name="name" id="name" placeholder="Username" value=""></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" id="password" placeholder="Password" value=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>Submit</button>
+                    </td>
+                </tr>
+            </table></center>
+        </form>
+    </div>
+    <script src="website_Javascript_file.js">
+    </script>
+</body>
+</html>

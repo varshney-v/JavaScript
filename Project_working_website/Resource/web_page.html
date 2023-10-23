@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            border:  1px solid rgb(224, 24, 24);
+            width: 100%;
+            height: auto;
+        }
+        nav {
+            background-color: brown;
+            /* position: fixed; */
+            width: auto;
+            height: auto;
+            margin-top: -4px;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        header nav ul{
+            display : flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            border: 1px solid grey;
+        }
+        /* nav ul {
+            display: inline;
+        } */
+        .flex_child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 40px;  
+            padding-right: 2%;
+        }
+        .flex_child li {
+            list-style: none;
+        }
+        .flex_child li a {
+            text-decoration: none;
+            border: 1px solid rgb(100, 5, 5);
+            border-radius: 20%;
+            background-color: aliceblue;
+            padding: 6px;
+        }
+        .flex_child li a:hover {
+            cursor: pointer;
+            color:white;
+            background-color: rgb(240, 201, 201);
+        }
+        /* .userData {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 600px; 
+            }
+
+        .section {
+            flex: 0 0 calc(33.33% - 10px); 
+            border: 1px solid #000;
+            box-sizing : border-box;
+            margin:10px;
+        } 
+        .dataSection{
+            display: flex;
+            justify-content:space-around ;
+            align-items: center;
+        }
+     */
+        section .userData {
+           display: grid;
+           margin-top: 50px;
+           margin-left: 10%;
+           margin-bottom: 50px;
+           grid-template-rows: 250px 250px 250px;
+           grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        #product-list {
+            display: none;
+            position: absolute;
+        }
+
+        #product:hover + .product-list {
+            display: block;
+            /* overflow-y: hidden; */
+        }
+        .product-list:hover {
+            display: block; 
+        }
+        .product {
+            position: relative;
+        }
+        .product-list {
+            margin: 0px;
+            margin-left : -6px;
+            padding: 10px;
+            background-color: brown;
+            width: auto;
+            height:150px;
+        }
+        .product-list ol li a {
+            padding: 00px;
+            margin-top: 50px/* Adjust the padding as needed */
+           
+
+        }
+      
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <div class ="logo">
+                    <img src="login_image.png" alt="Logo">
+                </div>
+                <div class="flex_child">
+                <li><a href="http://127.0.0.1:5500/Project_working_website/Resource/Home_page_assignment.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" id="product">Product</a>
+                    <div id="product-list" class="product-list">
+                        <ol class="productData">
+                            <li><a href="#" >product1</a></li>
+                            <li><a href="#">product2</a></li>
+                            <li><a href="#">product3</a></li>
+                            <li><a href="#">product4</a></li>
+                            <li><a href="#">product5</a></li>
+                            <li><a href="#">product6</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li><a href="">Services</a></li>
+                <li><a href="#" id="detail">User Details</a></li>
+                <li ><button onclick="logout()">Logout</button></li>
+            </div>
+            </ul>
+        </nav>
+        </header>
+        <section class="dataSection">
+            <div class="userData">
+            <div class="section">
+                <span><img src="login_image.png" alt="Logo"><br>
+                        <button onclick="changeCounter('counting_number1', -1)">-</button>
+                        <input value="0" id="counting_number1" class=".input-element" placeholder="0">
+                        <button onclick="changeCounter('counting_number1', 1)">+</button>
+                    </span>
+                </div>
+                <div class="section">
+                    <span><img src="login_image.png" alt="Logo"><br>
+                        <button onclick="changeCounter('counting_number2', -1)">-</button>
+                        <input value="0" id="counting_number2" class=".input-element" placeholder="0">
+                        <button onclick="changeCounter('counting_number2', 1)">+</button>
+                    </span>
+                </div>
+                <div class="section">
+                    <span><img src="login_image.png" alt="Logo"><br>
+                        <button onclick="changeCounter('counting_number3', -1)">-</button>
+                        <input value="0" id="counting_number3"  class=".input-element"placeholder="0">
+                        <button onclick="changeCounter('counting_number3', 1)">+</button>
+                    </span>
+                </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="Logo"><br>
+                    <button onclick="changeCounter('counting_number4', -1)">-</button>
+                    <input value="0" id="counting_number4" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number4', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="Logo"><br>
+                    <button onclick="changeCounter('counting_number5', -1)">-</button>
+                    <input value="0" id="counting_number5" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number5', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="Logo"><br>
+                    <button onclick="changeCounter('counting_number6', -1)">-</button>
+                    <input value="0" id="counting_number6"  class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number6', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="Logo"><br>
+                    <button onclick="changeCounter('counting_number7', -1)">-</button>
+                    <input value="0" id="counting_number7" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number7', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="Logo"><br>
+                    <button onclick="changeCounter('counting_number8', -1)">-</button>
+                    <input value="0" id="counting_number8" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number8', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="abibbas_Shoes"><br>
+                    <button onclick="changeCounter('counting_number9', -1)">-</button>
+                    <input value="0" id="counting_number9" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number9', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="abibbas_Shoes"><br>
+                    <button onclick="changeCounter('counting_number10', -1)">-</button>
+                    <input value="0" id="counting_number10" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number10', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="abibbas_Shoes"><br>
+                    <button onclick="changeCounter('counting_number11', -1)">-</button>
+                    <input value="0" id="counting_number11" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number11', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="abibbas_Shoes"><br>
+                    <button onclick="changeCounter('counting_number12', -1)">-</button>
+                    <input value="0" id="counting_number12" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number12', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="abibbas_Shoes"><br>
+                    <button onclick="changeCounter('counting_number13', -1)">-</button>
+                    <input value="0" id="counting_number13" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number13', 1)">+</button></span>
+            </div>
+            <div class="section">
+                <span><img src="login_image.png" alt="abibbas_Shoes"><br>
+                    <button onclick="changeCounter('counting_number14', -1)">-</button>
+                    <input value="0" id="counting_number14" class=".input-element" placeholder="0">
+                    <button onclick="changeCounter('counting_number14', 1)">+</button></span>
+            </div>
+        </div>
+        </section>
+   <script src="website_Javascript_file.js">
+    
+   </script>
+
+</body>
+</html>
