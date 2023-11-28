@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript function</title>
+</head>
+<body>
+    <h1>JavaScript Function Syntax</h1>
+    <p>A JavaScript function is defined with the function keyword, followed by a <strong>name</strong>, followed by parentheses <strong>()</strong>.</p>
+    <p>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</p>
+    <p>
+        The parentheses may include parameter names separated by commas:
+        (parameter1, parameter2, ...)
+    </p>
+    <h2>Example</h2>
+    <div>
+        <p style="color: blue;padding: 5px;border: 10px solid gainsboro;">function name(parameter1, parameter2, parameter3) {
+            // code to be executed
+          }</p>
+    </div>
+    <p>Function parameters are listed inside the parentheses <b>()</b> in the function definition.</p>
+    <p>
+        Function arguments are the values received by the function when it is invoked.
+    </p>
+    <p>
+        Inside the function, the arguments (the parameters) behave as local variables.
+    </p>
+    <h1>
+        Function Invocation
+    </h1>
+    <p>
+        The code inside the function will execute when "something" invokes (calls) the function:
+        <ul>
+            <li>When an event occurs (when a user clicks a button)
+            </li>
+            <li>When it is invoked (called) from JavaScript code
+            </li>
+            <li>Automatically (self invoked)
+            </li>
+        </ul>
+    </p>
+    <h1>
+        Function Return
+    </h1>
+    <p>When JavaScript reaches a return statement, the function will stop executing.
+        <br>
+        If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+    </p>
+
+    <p>
+        Functions often compute a return value. The return value is "returned" back to the "caller":
+    </p>
+    <h2>
+        Example
+    </h2>
+    <p>Calculate the product of two numbers, and return the result:
+    </p>
+    <button type="button" onclick="myClick(a,b);">submit</button>
+
+
+    <p>Call a function which performs a calculation and returns the result:</p>
+    <p id="demo0">1</p>
+    <p id="demo1">2</p>
+    <button type="button" onclick="myCalcc(a,b)" >submit</button>
+    <p id="demo"></p>
+    <p id="demo11"></p>
+    <p>Using a function as a variable:</p>
+
+    <p id="demo8"></p>
+    
+    <script>
+    let text = "The temperature is " + toCelsius(77) + " Celsius.";
+    document.getElementById("demo8").innerHTML = text;
+    
+    function toCelsius(fahrenheit) {
+      return (5/9) * (fahrenheit-32);
+    } 
+    </script>
+
+    
+</body>
+<script>
+function myCalc(a,b){
+    return a + b;
+}
+let result = myCalc(8,2);
+document.getElementById("demo").innerHTML = result;
+
+let a = parseInt(document.getElementById("demo0").innerHTML);
+let b = parseInt(document.getElementById("demo1").innerHTML);
+
+function myClick(a,b){
+    let answer1 = a * b;
+    document.getElementById("demo11").innerHTML = answer1;
+}
+
+
+function myCalcc(a,b){
+    let answer = a + b;
+    document.getElementById("demo11").innerHTML = answer;
+}
+</script>
+</html>

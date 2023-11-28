@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Font Size</title>
+</head>
+<body>
+    <h2>What Can JavaScript Do?</h2>
+<!-- font changed -->
+<p id="demo">What should i do for you!?</p>
+
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize = '100px'">CLick me to change the size!!!</button>
+<button type="button" onclick="document.getElementById('demo').style.fontSize = '35px'"> please click if you want to resize or after clicking of another button</button>
+
+
+
+<!-- display none and block -->
+
+<p id="demo2">What should i do for you!?</p>
+
+
+
+
+<button type="button" onclick="document.getElementById('demo2').style.display = 'none'">Click me!!!see what's happened</button>
+<button type="button" onclick="document.getElementById('demo2').style.display = 'block'">Click me!!!see what's happened</button>
+
+
+
+<!-- display none and block -->
+<p id="demo3">What should i do for you!?</p>
+<button type="button" onclick="nameChanged()">Try it</button>
+<button type="button" onclick="renameChanged()">Re-Try it</button>
+<script>
+    function nameChanged() {
+        document.getElementById('demo3').innerHTML = ' what is your name?'
+    }
+    function renameChanged() {
+        document.getElementById('demo3').innerHTML = 'What should i do for you!?'
+    }
+</script>
+</body>
+</html>
