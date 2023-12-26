@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript string method</title>
+</head>
+<body>
+
+    <h2>JavaScript Template Literals</h2>
+
+    <p>Template literals allows variables in strings:</p>
+
+    <p id="demo444"></p>
+
+    <p>Template literals are not supported in Internet Explorer.</p>
+
+
+    <p>The length of the string is:</p>
+    <p id="demo"></p>
+
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="demo22"></p>
+    <p id="demo2"></p>
+
+    <h1>JavaScript String Methods</h1>
+<p>Convert string to upper case:</p>
+
+<h1>JavaScript String Methods</h1>
+<h2>The split().Method</h2>
+
+<p id="demo11"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo2222">Hello World!</p>
+    <script>
+
+function myFunction() {
+  let text = document.getElementById("demo2222").innerHTML;
+  document.getElementById("demo2222").innerHTML =
+  text.toUpperCase();
+}
+
+
+        let text1 = "Apple, Banana, Kiwi";
+let part = text1.slice(7,13);
+document.getElementById("demo22").innerHTML = part;
+
+let text2 = "Apple, Banana, Kiwi";
+let part2 = text2.slice(7)
+document.getElementById("demo2").innerHTML = part;
+
+
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("demo").innerHTML = text.length;
+
+
+    let text4 = "Hello";
+const myArr = text.split("");
+
+text = "";
+for (let i = 0; i < myArr.length; i++) {
+  text += myArr[i] + "<br>"
+}
+document.getElementById("demo11").innerHTML = text;
+
+
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+document.getElementById("demo444").innerHTML = total;
+</script>
+</body>
+</html>

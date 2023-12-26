@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Events</title>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    <p>HTML events are "things" that happen to HTML elements.
+        <br>
+        When JavaScript is used in HTML pages, JavaScript can "react" on these events.</p>
+    <hr>
+    <h2>HtmlEvents</h2>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+    <p id="demo"></p>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+<!-- Change the current context by using this method -->
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <button onclick="this.innerHTML=Date()">Press</button>
+</body>
+</html>
